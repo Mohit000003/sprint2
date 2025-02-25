@@ -43,7 +43,7 @@ git config --global user.email "your.email@example.com"
 
 - **CI/CD Pipeline Setup (Optional)** – If using automated validation, ensure your CI/CD pipeline supports commit sign-off verification.
 
-# What is Commit Sign-Off ?
+# What is Commit Sign-Off?
 Commit sign-off is a way for developers to certify that they are the author of a commit and agree to the project’s contribution guidelines. It is done by adding a Signed-off-by line in the commit message.
 
 ``` bash
