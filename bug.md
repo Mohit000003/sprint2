@@ -2,7 +2,7 @@
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|----------------------|-------------|----------------|-----|-------------|-------------|
-| Mohit Kumar|   26-02-2025        | V1   | Mohit Kumar |26-02-2025    |  Internal Reviewer | Komal Jaiswal |
+| Mohit Kumar|   26-02-2025        | Version 1   | Mohit Kumar |26-02-2025    |  Internal Reviewer | Komal Jaiswal |
 
 
 ## **Table of Contents**
@@ -14,12 +14,12 @@
 - [Advantages of Bug Analysis](#advantages-of-bug-analysis)
 - [Proof of Concept (POC)](#proof-of-concept-poc)
 - [Best Practices for Bug Analysis](#best-practices-for-bug-analysis)
-- [Recommendations & Conclusion](#recommendations--conclusion)
+- [Conclusion](#conclusion)
 - [Contact Information](#contact-information)
 - [References](#references)
 
 ## **Introduction**
-"This document covers bug analysis in GoLang projects, explaining why it is important, how to perform it, and the tools used to detect and fix issues."
+This document explains how to find and fix bugs in GoLang projects. It helps improve code quality, security, and performance by using different tools to detect and solve issues.
 
 ## **What is Bug Analysis?**
 Bug analysis refers to identifying, categorizing, and understanding software defects to improve code quality and prevent issues. It helps developers:
@@ -62,33 +62,46 @@ Bug analysis refers to identifying, categorizing, and understanding software def
 - Aids in adherence to coding standards and best practices.
 
 
-## **Proof of Concept (POC) - Using golangci-lint**
+## **Proof of Concept (POC)**
 Follow these steps to perform bug analysis using `golangci-lint`:
 
-### 1. Clone the Repository
+### 1.Update and Install Go
+``` bash
+sudo apt update
+sudo apt install golang -y
+```
+ ### 2. Check for the version
+``` bash
+  go version
+```
+### 3. Clone the Repository
+
 ```sh
 # Clone the repository to analyze
-git clone https://github.com/your-repo/sample-project.git
-cd sample-project
-```
 
-### 2. Install golangci-lint
+git clone git@github.com:OT-MICROSERVICES/employee-api.git
+cd employee-api
+```
+![image](https://github.com/user-attachments/assets/61a99696-f359-4d0f-960d-6c7752143ea6)
+
+### 4. Install golangci-lint
 ```sh
 # Install golangci-lint
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
 ```
 
-### 3. Run Bug Analysis
+
+### 5. Run Bug Analysis
 ```sh
 # Run golangci-lint to check for bugs and issues
-golangci-lint run
-```
 
-### 4. Fix Issues and Re-run
-```sh
-# Fix reported issues and re-run the linter
-golangci-lint run
+golangci-lint run ./...
 ```
+![image](https://github.com/user-attachments/assets/13b5e8e2-cec0-4402-b0dc-fac3e54e450a)
+
+
+
 
 
 ## **Best Practices for Bug Analysis**
