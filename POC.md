@@ -6,12 +6,17 @@
 | Mohit Kumar|   25-02-2025        | V1   | Mohit Kumar |25-02-2025    |  Internal Reviewer | Komal Jaiswal |
 
 ## Table of Contents
-
+- [Introdcution](#introduction)
 - [Prerequisites](#prerequisites)
 - [Step-by-Step Installation Guide](#step-by-step-installation-guide)
 - [Contact Information](#contact-information)
 - [References](#references)
 ***
+
+
+## Introduction
+This POC showcases how to use Git Commit Sign-Off to verify and certify code contributions, ensuring accountability and compliance with the Developer Certificate of Origin (DCO).
+
 ## Prerequisites
 
 
