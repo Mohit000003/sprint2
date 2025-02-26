@@ -1,35 +1,28 @@
 # Proof of Concept | Commit Sign-off
 
 
-| **Author** | **Created on** | **Version** | **Last edited on** | **Reviewer** |
-|------------|----------------|-------------------|---------------------|----------|
-| Mohit Kumar  | 26-02-2025     | V1  | 26-02-2025          | Komal Jaiswal |
+| **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
+|------------|----------------------|-------------|----------------|-----|-------------|-------------|
+| Mohit Kumar|   25-02-2025        | V1   | Mohit Kumar |25-02-2025    |  Internal Reviewer | Komal Jaiswal |
 
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Step-by-Step Installation Guide](#step-by-step-installation-guide)
 - [Contact Information](#contact-information)
-- [References](#refrences)
+- [References](#references)
 ***
-# Prerequisites
+## Prerequisites
+
 
 Before using commit sign-off, ensure you have the following:
 
-- **Git Installed** – Ensure you have Git installed on your system. You can check by running:
-``` bash
-git --version
-```
-
-- **Configured Git User** – Set up your name and email in Git:
-``` bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-
-- **Access to a Repository** – You should have access to a Git repository where you can commit changes.
-
-- **CI/CD Pipeline Setup (Optional)** – If using automated validation, ensure your CI/CD pipeline supports commit sign-off verification.
+| Requirement            | Description |
+|------------------------|-------------|
+| **Git Installed**      | Ensure you have Git installed on your system. Check with:  ```  git --version ``` |
+| **Configured Git User** | Set up your name and email in Git:  ```  git config --global user.name "Your Name"  git config --global user.email "your.email@example.com" ``` |
+| **Access to a Repository** | Ensure you have access to a Git repository where you can commit changes. |
+| **CI/CD Pipeline Setup (Optional)** | If using automated validation, ensure your CI/CD pipeline supports commit sign-off verification. |
 
 ## Step-by-Step Installation Guide
 
@@ -123,8 +116,7 @@ This will upload your signed-off commit to the repository.
 | Mohit kumar   |  mohit.kumar@mygurukulam.co          |
 
 
-## References 
-
+## References
 
 | Resource                                  | Link                                                       |
 |-------------------------------------------|------------------------------------------------------------|
