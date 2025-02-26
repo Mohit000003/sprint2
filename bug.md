@@ -63,44 +63,8 @@ Bug analysis refers to identifying, categorizing, and understanding software def
 
 
 ## **Proof of Concept (POC)**
-Follow these steps to perform bug analysis using `golangci-lint`:
 
-### 1.Update and Install Go
-``` bash
-sudo apt update
-sudo apt install golang -y
-```
- ### 2. Check for the version
-``` bash
-  go version
-```
-### 3. Clone the Repository
-
-```sh
-# Clone the repository to analyze
-
-git clone git@github.com:OT-MICROSERVICES/employee-api.git
-cd employee-api
-```
-![image](https://github.com/user-attachments/assets/61a99696-f359-4d0f-960d-6c7752143ea6)
-
-### 4. Install golangci-lint
-```sh
-# Install golangci-lint
-
-curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
-```
-
-
-### 5. Run Bug Analysis
-```sh
-# Run golangci-lint to check for bugs and issues
-
-golangci-lint run ./...
-```
-![image](https://github.com/user-attachments/assets/13b5e8e2-cec0-4402-b0dc-fac3e54e450a)
-
-
+For Detailed Documentation Follow this link: [Commit Sign-Off Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-64/Application%20CI%20Design/Generic%20CI%20operation/Commit%20Sign%20off/POC/README.md)
 
 
 
@@ -123,7 +87,10 @@ Bug analysis is a vital practice for maintaining high-quality, secure, and effic
 
 
 ## **References**
-- [GoLang Official Documentation](https://golang.org/doc/)
-- [golangci-lint](https://golangci-lint.run/)
-- [staticcheck](https://staticcheck.io/)
+
+| Resource                | Link |
+|-------------------------|------|
+| **GoLang Official Documentation** | [Visit](https://golang.org/doc/) |
+| **golangci-lint** | [Visit](https://golangci-lint.run/) |
+| **staticcheck** | [Visit](https://staticcheck.io/) |
 
