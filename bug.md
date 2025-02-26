@@ -17,23 +17,23 @@
 - [Conclusion](#conclusion)
 - [Contact Information](#contact-information)
 - [References](#references)
-
+___
 ## **Introduction**
 This document explains how to find and fix bugs in GoLang projects. It helps improve code quality, security, and performance by using different tools to detect and solve issues.
-
+___
 ## **What is Bug Analysis?**
 Bug analysis refers to identifying, categorizing, and understanding software defects to improve code quality and prevent issues. It helps developers:
 - Detect issues early in the development cycle.
 - Improve software reliability and maintainability.
 - Reduce debugging time and enhance performance.
 - Ensure adherence to best practices and security standards.
-
+___
 ## **Why Do We Perform Bug Analysis?**
 - To improve the quality and stability of software.
 - To enhance security by identifying vulnerabilities.
 - To optimize performance and reduce technical debt.
 - To maintain a clean and efficient codebase.
-
+___
 ## **Different Tools for Bug Analysis**
 
 
@@ -43,7 +43,7 @@ Bug analysis refers to identifying, categorizing, and understanding software def
 
 - **Go Vet:-** Detects common mistakes and suspicious code patterns to prevent runtime errors.
 
-
+___
 
 ## **Comparison of Bug Analysis Tools**  
 
@@ -53,6 +53,7 @@ Bug analysis refers to identifying, categorizing, and understanding software def
 | **staticcheck**   | Finds hidden bugs and performance issues | Catches deep, tricky problems in code | Sometimes flags issues that aren’t real problems |
 | **Go Vet**        | Detects common coding mistakes | Helps catch simple but important errors early | Limited to basic checks, may miss complex issues |
 
+___
 
 ## **Advantages of Bug Analysis**
 - Ensures high code quality and maintainability.
@@ -61,12 +62,12 @@ Bug analysis refers to identifying, categorizing, and understanding software def
 - Helps in early detection of performance bottlenecks.
 - Aids in adherence to coding standards and best practices.
 
-
+___
 ## **Proof of Concept (POC)**
 
 For Detailed Documentation Follow this link: [Commit Sign-Off Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-64/Application%20CI%20Design/Generic%20CI%20operation/Commit%20Sign%20off/POC/README.md)
 
-
+___
 
 ## **Best Practices for Bug Analysis**
 - Automate CI/CD pipeline with `golangci-lint`.
@@ -75,22 +76,23 @@ For Detailed Documentation Follow this link: [Commit Sign-Off Guide](https://git
 - Enforce coding standards via linters.
 - Integrate security scanning for vulnerability detection.
 - Perform thorough testing (unit, integration, and regression tests).
-
+___
 ## **Conclusion**
 Bug analysis is a vital practice for maintaining high-quality, secure, and efficient GoLang applications. Among all available tools, **golangci-lint** stands out due to its speed, efficiency, and ease of integration. It is highly recommended for developers to integrate `golangci-lint` into their workflow and CI/CD pipelines to ensure continuous code quality and maintainability
-
+___
 ## **Contact Information**
 
 | **Name** | **Email address**            |
 |----------|-------------------------------|
 | Mohit kumar   |  mohit.kumar@mygurukulam.co          |
 
-
+___
 ## **References**
 
 | Resource                | Link |
 |-------------------------|------|
-| **GoLang Official Documentation** | [Visit](https://golang.org/doc/) |
-| **golangci-lint** | [Visit](https://golangci-lint.run/) |
-| **staticcheck** | [Visit](https://staticcheck.io/) |
+| **GoLang Official Documentation** | [Official Documentation](https://golang.org/doc/) |
+| **golangci-lint** | [Golangci-lint](https://golangci-lint.run/) |
+| **staticcheck** | [Staiccheck](https://staticcheck.io/) |
 
+***
