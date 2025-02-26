@@ -3,14 +3,14 @@
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|----------------------|-------------|----------------|-----|-------------|-------------|
-| Mohit Kumar|   26-02-2025        | Version 1   | Mohit Kumar |26-02-2025    |  Internal Reviewer | Komal Jaiswal |
+| Mohit Kumar|   26-02-2025        | V1   | Mohit Kumar |26-02-2025    |  Internal Reviewer | Komal Jaiswal |
 
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Step-by-Step Installation Guide](#step-by-step-installation-guide)
 - [Contact Information](#contact-information)
-- [References](#refrences)
+- [References](#references)
 ***
 ## Prerequisites
 
@@ -73,7 +73,7 @@ ___
 
 | Resource                | Link |
 |-------------------------|------|
-| **GoLang Official Documentation** | [Visit](https://golang.org/doc/) |
+| **GoLang Official Documentation** | [Official Documentation](https://golang.org/doc/) |
 
 
 ***
