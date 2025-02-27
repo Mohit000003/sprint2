@@ -1,4 +1,4 @@
-# OWASP Dependency Check - Proof of Concept (PoC)
+# Proof of Concept (PoC)
 ![image](https://github.com/user-attachments/assets/3f35a99f-097e-41af-8226-ba77fb80fbc3)
 
 
