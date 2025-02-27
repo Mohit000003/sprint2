@@ -23,7 +23,6 @@
 ___
 
 ## Introduction
-[OWASP Dependency Check](https://owasp.org/www-project-dependency-check/) is a security tool that analyzes project dependencies to identify publicly known vulnerabilities. It helps detect dependencies with security issues by referencing the National Vulnerability Database (NVD).
 
 This **Proof of Concept (PoC)** demonstrates how to set up and run **OWASP Dependency Check** on the `employee-api` repository, generating a security report for further analysis.
 
@@ -116,7 +115,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
-### Open the Report in Google Chrome
+### Step 3: Open the Report in Google Chrome
 ```
 google-chrome security-reports/dependency-check-report.html &
 ```
@@ -138,6 +137,6 @@ ___
 |-----------|-------------|
 | [OWASP Dependency Check Documentation](https://jeremylong.github.io/DependencyCheck/) | Official documentation for OWASP Dependency Check. |
 | [National Vulnerability Database (NVD)](https://nvd.nist.gov/) | The vulnerability database referenced by Dependency Check. |
-| [GitHub - OWASP Dependency Check](https://github.com/jeremylong/DependencyCheck) | Official GitHub repository for the project. |
+
 
 ___
