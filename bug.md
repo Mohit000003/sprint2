@@ -1,98 +1,115 @@
-# **GoLang CI Checks | Bugs Analysis**
+# Commit Sign-Off - Detailed Documentation
+
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|----------------------|-------------|----------------|-----|-------------|-------------|
-| Mohit Kumar|   26-02-2025        | Version 1   | Mohit Kumar |26-02-2025    |  Internal Reviewer | Komal Jaiswal |
+| Mohit Kumar|   25-02-2025        | V1   | Mohit Kumar |25-02-2025    |  Internal Reviewer | Komal Jaiswal |
 
+## Table of Contents
 
-## **Table of Contents**
 - [Introduction](#introduction)
-- [What is Bug Analysis?](#what-is-bug-analysis)
-- [Why Do We Perform Bug Analysis?](#why-do-we-perform-bug-analysis)
-- [Different Tools for Bug Analysis](#different-tools-for-bug-analysis)
-- [Comparison of Bug Analysis Tools](#comparison-of-bug-analysis-tools)
-- [Advantages of Bug Analysis](#advantages-of-bug-analysis)
+- [What is Commit Sign-Off?](#what-is-commit-sign-off)
+- [Why We Use It](#why-we-use-it)
+- [Tools for Commit Sign-Off](#tools-for-commit-sign-off)
+- [Advantages](#advantages)
 - [Proof of Concept (POC)](#proof-of-concept-poc)
-- [Best Practices for Bug Analysis](#best-practices-for-bug-analysis)
-- [Conclusion](#conclusion)
+- [Best Practices](#best-practices)
+- [Recommendation/Conclusion](#recommendationconclusion)
 - [Contact Information](#contact-information)
 - [References](#references)
-___
-## **Introduction**
-This document explains how to find and fix bugs in GoLang projects. It helps improve code quality, security, and performance by using different tools to detect and solve issues.
-___
-## **What is Bug Analysis?**
-Bug analysis refers to identifying, categorizing, and understanding software defects to improve code quality and prevent issues. It helps developers:
-- Detect issues early in the development cycle.
-- Improve software reliability and maintainability.
-- Reduce debugging time and enhance performance.
-- Ensure adherence to best practices and security standards.
-___
-## **Why Do We Perform Bug Analysis?**
-- To improve the quality and stability of software.
-- To enhance security by identifying vulnerabilities.
-- To optimize performance and reduce technical debt.
-- To maintain a clean and efficient codebase.
-___
-## **Different Tools for Bug Analysis**
+
+---
+
+## Introduction
 
 
-- **golangci-lint:-** A fast tool that runs multiple linters to find mistakes, unused code, and formatting issues, helping keep your code clean.
+This document explains **commit sign-offs**, why they're important for accountability and compliance, and how to use them in your workflow to follow project rules and legal guidelines.
 
-- **staticcheck:-** Finds hidden bugs, potential errors, and performance issues to improve code quality.
 
-- **Go Vet:-** Detects common mistakes and suspicious code patterns to prevent runtime errors.
 
-___
+---
 
-## **Comparison of Bug Analysis Tools**  
+## What is Commit Sign-Off?
 
-| **Tool**          | **What It Does**                              | **Pros (Strengths)**                              | **Cons (Weaknesses)**             |
-|------------------|----------------------------------|----------------------------------|-------------------------------|
-| **golangci-lint** | Checks code quality using multiple linters | Fast and runs multiple checks at once | Needs some setup to configure |
-| **staticcheck**   | Finds hidden bugs and performance issues | Catches deep, tricky problems in code | Sometimes flags issues that aren’t real problems |
-| **Go Vet**        | Detects common coding mistakes | Helps catch simple but important errors early | Limited to basic checks, may miss complex issues |
+Commit sign-off is a process where a developer includes a "Signed-off-by" line in their commit message. This line typically includes the developer's name and email, acknowledging that they have read and agree to the project's contribution policies. This is especially important in open-source projects to ensure that all contributions meet legal and compliance standards.
 
-___
+---
 
-## **Advantages of Bug Analysis**
-- Ensures high code quality and maintainability.
-- Detects potential vulnerabilities and security issues.
-- Reduces debugging time, improving developer productivity.
-- Helps in early detection of performance bottlenecks.
-- Aids in adherence to coding standards and best practices.
+## Why We Use It
 
-___
-## **Proof of Concept (POC)**
+- **Confirms Authorship** – Identifies who wrote the code.
+- **Ensures Compliance** – Helps enforce project guidelines and legal policies (e.g., Developer Certificate of Origin - DCO).
+- **Improves Traceability** – Maintains a transparent development history.
+- **Supports CI/CD** – Enables automated checks for compliance before merging.
+
+---
+
+## Tools for Commit Sign-Off
+
+
+| Tool             | What It Does                                                                                                   |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| **Git**          | Git itself allows you to sign off your commits using the -s flag. When you run `git commit -s -m "Your message"`, it automatically adds a "Signed-off-by" line with your name and email. This shows that you agree to the commit and take responsibility for it. |
+| **Git Hooks**    | These are small scripts that run automatically before or after certain Git actions. You can set up a **pre-commit hook** to block commits that don't have a sign-off, ensuring that every commit follows the required policy. |
+| **DCO Bot**      | This is a bot used in GitHub repositories to check if all commits in a pull request (PR) are properly signed off. If a commit is missing a sign-off, the bot will leave a comment asking the author to fix it before merging the PR. |
+| **CI/CD Pipelines** | Continuous Integration/Continuous Deployment (CI/CD) tools like Jenkins, GitHub Actions, and GitLab CI/CD can be set up to **automatically verify** commit sign-offs. If a commit does not have a sign-off, the pipeline can **fail the build** or reject the changes. |
+
+---
+
+
+
+## Advantages
+
+- **Increased Accountability** – Developers are directly accountable for their contributions.
+- **Legal Compliance** – Ensures that commits comply with the Developer Certificate of Origin (DCO) and any legal policies.
+- **Better Collaboration** – Helps maintain a clean and clear history of who contributed what and when.
+- **Prevents Unauthorized Changes** – By ensuring compliance, it prevents unauthorized or accidental changes to the project.
+- **Easier Audits** – Simplifies the process of auditing commit history for compliance or code review.
+
+---
+
+## Proof of Concept (POC)
 
 For Detailed Documentation Follow this link: [Commit Sign-Off Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-64/Application%20CI%20Design/Generic%20CI%20operation/Commit%20Sign%20off/POC/README.md)
 
-___
+---
 
-## **Best Practices for Bug Analysis**
-- Automate CI/CD pipeline with `golangci-lint`.
-- Fix high-priority bugs before moving to enhancements.
-- Conduct regular static code analysis.
-- Enforce coding standards via linters.
-- Integrate security scanning for vulnerability detection.
-- Perform thorough testing (unit, integration, and regression tests).
-___
-## **Conclusion**
-Bug analysis is a vital practice for maintaining high-quality, secure, and efficient GoLang applications. Among all available tools, **golangci-lint** stands out due to its speed, efficiency, and ease of integration. It is highly recommended for developers to integrate `golangci-lint` into their workflow and CI/CD pipelines to ensure continuous code quality and maintainability
-___
-## **Contact Information**
+## Best Practices
 
-| **Name** | **Email address**            |
-|----------|-------------------------------|
-| Mohit kumar   |  mohit.kumar@mygurukulam.co          |
+| ✅ **Best Practice** | **Description**                                                                                       |
+|----------------------|------------------------------------------------------------------------------------------------------|
+| **Always sign off commits using -s** | Ensures every commit includes a valid Signed-off-by line. |
+| **Use Git hooks to enforce sign-offs locally** | Automate sign-off checks before committing code. |
+| **Automate checks in CI/CD pipelines** | Use tools like **DCO Bot** to prevent unsigned commits from merging. |
+| **Keep your name & email correctly configured in Git** | Run the following to ensure accurate commit attribution:<br> ```sh<br>git config --global user.name "Your Name"<br>git config --global user.email "your.email@example.com"<br>``` |
+| **Follow the project’s contribution guidelines** | Different repositories may have specific requirements. |
+| **Educate contributors on sign-offs** | Ensure all team members understand its importance. |
+| **Regularly audit commit history** | Periodically review past commits for compliance. |
+| **Use pre-commit hooks for validation** | Prevent unsigned commits before they are made. |
 
-___
-## **References**
+---
 
-| Resource                | Link |
-|-------------------------|------|
-| **GoLang Official Documentation** | [Official Documentation](https://golang.org/doc/) |
-| **golangci-lint** | [Golangci-lint](https://golangci-lint.run/) |
-| **staticcheck** | [Staiccheck](https://staticcheck.io/) |
+## Recommendation/Conclusion
 
-***
+Commit sign-off helps keep track of who contributed to a project and ensures that everyone follows the rules. It improves security, makes the development process more transparent, and prevents unauthorized changes.  
+
+By using **Git** with the `-s` flag for commit sign-offs, along with tools like **Git hooks** and **CI/CD pipelines**, teams can **automate checks, enforce compliance, and maintain a smooth and secure workflow**. A simple `-s` flag while committing can make a big difference in keeping projects organized, secure, and trustworthy.
+
+
+---
+
+## Contact Information
+
+| **Name**        | **Email address**            |
+|-----------------|------------------------------|
+| Mohit Kumar     | mohit.kumar@mygurukulam.co    |
+
+---
+
+## References
+
+| Resource                                  | Link                                                       |
+|-------------------------------------------|------------------------------------------------------------|
+| Developer Certificate of Origin (DCO)     | [Developer Certificate](https://developercertificate.org/) |
+| Git Commit Documentation                  | [Git Commit Docs](https://git-scm.com/docs/git-commit) |
+| Why Signed Commits Matter                 | [Contributor Covenant](https://www.contributor-covenant.org/) |
