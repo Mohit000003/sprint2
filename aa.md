@@ -1,8 +1,12 @@
-# SonarQube Authentication and Authorization
+# **SonarQube Authentication and Authorization**
+
+![image](https://github.com/user-attachments/assets/36c756cd-5ba1-4fdc-88cd-cce8c180cf31)
+
+
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|----------------------|-------------|----------------|-----|-------------|-------------|
-| Mohit Kumar|   01-02-2025        | V1   | Mohit Kumar |25-02-2025    |  Internal Reviewer | Komal Jaiswal |
+| Mohit Kumar|   01-03-2025        | V1   | Mohit Kumar |01-03-2025    |  Internal Reviewer | Komal Jaiswal |
 
 
 ## Table of Contents
@@ -14,10 +18,11 @@
 - [Best Practices](#best-practices)
 - [FAQ](#faq)
 - [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
 - [References](#references)
 ___
 ## Introduction
-SonarQube provides robust authentication and authorization mechanisms to secure access to its projects and features. It supports multiple authentication methods and fine-grained permission control.
+In this document, we explain the different types of authentication and authorization methods in SonarQube, along with best practices and a conclusion.
 
 ## What is Authentication and Authorization?
 - **Authentication** verifies who you are (identity validation).
@@ -33,7 +38,8 @@ ___
 - **Compliance:** Helps meet industry security and compliance standards.
 ___
 ## Authentication Methods
-SonarQube supports various authentication methods for flexibility in integration.
+
+**SonarQube supports various authentication methods for flexibility in integration.**
 
 | Authentication Method | Description | UI Configuration | Server Configuration |
 |----------------------|-------------|-----------------|----------------------|
@@ -44,7 +50,8 @@ SonarQube supports various authentication methods for flexibility in integration
 | **GitHub, GitLab, Bitbucket Cloud** | Uses OAuth authentication via third-party developer platforms. | Set up OAuth in `Administration > Security > OAuth` | Requires registering the application with the respective provider. |
 ___
 ## Authorization Methods
-SonarQube assigns permissions based on users and groups.
+
+**SonarQube assigns permissions based on users and groups.**
 
 | Authorization Method | Description | UI Configuration | Server Configuration |
 |---------------------|-------------|-----------------|----------------------|
@@ -54,11 +61,19 @@ SonarQube assigns permissions based on users and groups.
 | **Tokens** | Used for secure API authentication and authorization instead of passwords. | Managed via `Administration > Security > Users > Tokens` | Tokens are securely stored in SonarQube’s database and must be regenerated when expired. |
 ___
 ## Best Practices
-- Use **LDAP or SAML** for centralized authentication.
-- Apply **principle of least privilege** to permissions.
-- Enable **two-factor authentication (2FA)** where possible.
-- Regularly audit **user access logs**.
-- Use **tokens** for API access instead of password-based authentication.
+
+
+|  Best Practice | Description |
+|-----------------|--------------|
+| **Use Centralized Authentication** | Implement **LDAP or SAML** for secure, organization-wide authentication. |
+| **Apply Least Privilege Principle** | Grant only the required permissions to users, reducing security risks. |
+| **Secure API Access** | Use **authentication tokens** instead of passwords for API and automation. |
+| **Enable Multi-Factor Authentication (MFA)** | Add an extra layer of security to prevent unauthorized logins. |
+| **Regularly Audit Access Logs** | Monitor user activities to detect unusual behavior or potential security threats. |
+| **Rotate Credentials & Tokens** | Periodically update passwords and API tokens to enhance security. |
+| **Use Role-Based Access Control (RBAC)** | Assign permissions based on roles to simplify and strengthen access control. |
+
+
 ___
 ## FAQ
 ### Q1: What is the default authentication and authorization behavior in SonarQube?
@@ -77,7 +92,14 @@ ___
 - Yes, via SAML, LDAP, or OAuth integrations.
 ___
 ## Conclusion
-SonarQube provides a flexible authentication and authorization system, integrating with multiple identity providers. It allows organizations to manage access control securely and efficiently.
+In our project, we leverage SonarQube’s Built-in Authentication for secure user management, Project-based Permissions for fine-grained access control, and User Tokens for seamless CI/CD and API integration. This approach ensures secure authentication, controlled access, and efficient automation in SonarQube.
+
+___
+## Contact Information
+
+| **Name**        | **Email address**            |
+|-----------------|------------------------------|
+| Mohit Kumar     | mohit.kumar@mygurukulam.co    |
 ___
 ## References
 
