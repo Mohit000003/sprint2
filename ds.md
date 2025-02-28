@@ -78,7 +78,7 @@ OWASP Dependency Check is chosen due to its **free and open-source nature**, bro
 ---
 
 ## Proof of Concept (POC)
-We will implement **OWASP Dependency Check** for scanning GoLang dependencies in a project.
+We will implement [OWASP Dependency Check](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-86/Application%20CI%20Design/GoLang%20CI%20Checks/Dependency%20scanning/POC/README.md) for scanning GoLang dependencies in a project.
 
 ---
 
