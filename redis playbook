@@ -1,0 +1,74 @@
+-----------
+ansible.cfg
+-----------
+[defaults]
+inventory=./aws_ec2.yaml
+host_key_checking=False
+enable_plugins=aws_ec2
+forks=10
+collections_path=./collections
+private_key_file=/home/ubuntu/sanataak.pem
+remote_user=ubuntu
+----------------
+aws_ec2.yaml
+------------------
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: tags.Name
+    prefix: tag_Name
+filters:
+  instance-state-name: running
+compose:
+  ansible_host: private_ip_address
+
+-----------
+Redis.yaml
+----------
+---
+- name: Install and Configure Redis
+  hosts: tag_Name_dev_otms_redis_ec2
+  become: yes
+  gather_facts: yes 
+  vars:
+    private_ip: "{{ ansible_default_ipv4.address }}"
+  tasks:
+    - name: Debug Private IP
+      debug:
+        msg: "Private IP for this host: {{ private_ip }}"
+
+    - name: Update System Packages
+      apt:
+        update_cache: yes
+
+    - name: Install Redis Server
+      apt:
+        name: redis-server
+        state: present
+
+    - name: Check Redis Version
+      command: redis-server -v
+      register: redis_version
+
+    - name: Display Redis Version
+      debug:
+        msg: "{{ redis_version.stdout }}"
+
+    - name: Start and Enable Redis Service
+      systemd:
+        name: redis-server
+        enabled: yes
+        state: started
+
+    - name: Update Redis Bind Address to Private IP
+      lineinfile:
+        path: /etc/redis/redis.conf
+        regexp: '^bind '
+        line: "bind {{ private_ip }}"
+        backup: yes
+
+    - name: Restart Redis Service
+      systemd:
+        name: redis-server
+        state: restarted
