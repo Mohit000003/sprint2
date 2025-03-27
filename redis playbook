@@ -23,6 +23,14 @@ filters:
 compose:
   ansible_host: private_ip_address
 
+-------
+- name: Install and Configure Redis
+  hosts: tag_Name_dev_otms_redis_ec2
+  become: yes
+  roles:
+    - redis_role
+-----------
+
 -----------
 Redis.yaml
 ----------
